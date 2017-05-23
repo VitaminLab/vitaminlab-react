@@ -1,0 +1,75 @@
+
+/*
+ * Suggestions start out invisible, and they show up only when triggered.
+ */
+.suggestions {
+	display: none;
+}
+
+.has-suggestions {
+	.suggestions {
+		display: block;
+	}
+}
+
+
+/*
+ * Suggestions list
+ */
+.suggestions__suggestions {
+	display: flex;
+	flex-direction: column;
+
+	.suggestions__value-category {
+		display: none;
+	}
+}
+
+.suggestions__category {
+	background-color: $gray-light;
+	border: 1px solid darken( $gray-light, 10% );
+	border-top: 0px;
+	padding: 4px 8px;
+	font-size: 13px;
+
+	.suggestions__category-name {
+		text-transform: uppercase;
+		color: $gray-dark;
+	}
+
+	.suggestions__category-counter {
+		margin-left: 6px;
+		text-transform: uppercase;
+		color: $gray-text-min;
+	}
+
+	.suggestions__category-show-all {
+		float: right;
+		cursor: pointer;
+	}
+}
+
+.suggestions__value {
+	padding: 10px 10px;
+	background: $white;
+	border: 1px solid darken( $gray-light, 10% );
+	border-top: 0px;
+	font-size: 16px;
+	cursor: pointer;
+
+	.suggestions__value-emphasis,
+	.suggestions__value-normal {
+		/* Required to allow clicks pass-through */
+		pointer-events: none;
+	}
+
+	.suggestions__value-emphasis {
+		font-weight: bold;
+		color: inherit;
+	}
+
+	&.has-highlight {
+		background-color: $blue-medium;
+		color: $white;
+	}
+}
