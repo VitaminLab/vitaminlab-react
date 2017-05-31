@@ -1,5 +1,5 @@
 import React from 'react'
-import { storiesOf, action } from '@kadira/storybook'
+import { storiesOf, action } from '@storybook/react'
 import Card from '../client/components/card'
 import CompactCard from '../client/components/card/compact'
 
