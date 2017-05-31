@@ -1,7 +1,8 @@
 import React from 'react';
 import { storiesOf, action, linkTo } from '@storybook/react';
-import Button from './Button';
 import Welcome from './Welcome';
+import "../node_modules/bootstrap/dist/css/bootstrap.css";
+import { Button } from 'reactstrap';
 
 storiesOf('Welcome', module)
   .add('to Storybook', () => (
